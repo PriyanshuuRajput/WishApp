@@ -12,10 +12,6 @@ namespace CrudAppUsingADO
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Replace this line:
-            // string? connectionString = builder.Configuration.GetConnectionString("Dbs");
-
-            // With this:
             string? connectionString = builder.Configuration.GetSection("ConnectionStrings")["Dbs"];
 
             if (string.IsNullOrEmpty(connectionString))
@@ -23,10 +19,8 @@ namespace CrudAppUsingADO
                 throw new InvalidOperationException("? Connection string 'Dbs' is missing in appsettings.json");
             }
 
-            // ? Register WishDBContext with DI
             builder.Services.AddScoped<WishDBContext>(sp => new WishDBContext(connectionString));
 
-            // Add MVC
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -39,7 +33,7 @@ namespace CrudAppUsingADO
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();   // ? needed for css/js/images if you missed it
+            app.UseStaticFiles();  
             app.UseRouting();
             app.UseAuthorization();
 
@@ -51,3 +45,4 @@ namespace CrudAppUsingADO
         }
     }
 }
+

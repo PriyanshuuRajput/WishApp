@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Views\NewFolder1\**" />
+		<Compile Remove="Views\NewFolder2\**" />
+		<Compile Remove="Views\NewFolder\**" />
+		<Content Remove="Views\NewFolder1\**" />
+		<Content Remove="Views\NewFolder2\**" />
+		<Content Remove="Views\NewFolder\**" />
+		<EmbeddedResource Remove="Views\NewFolder1\**" />
+		<EmbeddedResource Remove="Views\NewFolder2\**" />
+		<EmbeddedResource Remove="Views\NewFolder\**" />
+		<None Remove="Views\NewFolder1\**" />
+		<None Remove="Views\NewFolder2\**" />
+		<None Remove="Views\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="obj\CrudAppUsingADO.csproj.nuget.dgspec.json" />
+		<Content Include="obj\Debug\net9.0\CrudAppUsingADO.csproj.FileListAbsolute.txt" />
+		<Content Include="obj\Debug\net9.0\rpswa.dswa.cache.json" />
+		<Content Include="obj\Debug\net9.0\staticwebassets.removed.txt" />
+		<Content Include="obj\project.assets.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="obj\CrudAppUsingADO.csproj.nuget.g.props" />
+		<None Include="obj\CrudAppUsingADO.csproj.nuget.g.targets" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.AssemblyInfoInputs.cache" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.assets.cache" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.csproj.AssemblyReference.cache" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.csproj.CoreCompileInputs.cache" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.GeneratedMSBuildEditorConfig.editorconfig" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.MvcApplicationPartsAssemblyInfo.cache" />
+		<None Include="obj\Debug\net9.0\CrudAppUsingADO.RazorAssemblyInfo.cache" />
+		<None Include="obj\project.nuget.cache" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.8" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.8" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="obj\Debug\net9.0\refint\" />
+		<Folder Include="obj\Debug\net9.0\ref\" />
+		<Folder Include="obj\Debug\net9.0\staticwebassets\" />
+	</ItemGroup>
+
+</Project>
